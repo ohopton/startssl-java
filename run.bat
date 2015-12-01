@@ -1,6 +1,5 @@
-cd %~dp0
-set KEYTOOL=%JAVA_HOME%\bin\keytool
-set KEYSTORE=%JAVA_HOME%\lib\security\cacerts
+set KEYTOOL=c:\buildagent\jre\bin\keytool
+set KEYSTORE=c:\buildagent\jre\lib\security\cacerts
 set PASSWORD=changeit
 echo "Importing StartSSL certificates into %KEYSTORE%" >> run.log
 "%KEYTOOL%" -import -trustcacerts -keystore "%KEYSTORE%" -storepass %PASSWORD% -noprompt -alias startcom.ca -file ca.crt >> run.log
